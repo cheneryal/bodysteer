@@ -4,8 +4,7 @@ This project allows you to steer your character by tilting your body, using inpu
 
 This provides a hands-free steering solution, ideal for use with spin bikes and other fitness equipment connected via ANT+/Bluetooth sensors for speed/cadence.
 
-**(Optional: Add a GIF or YouTube link showing it in action here!)**
-[![](./images/ui.png)]
+*[![](./images/ui.png)]*
 
 ## Features
 
@@ -75,7 +74,7 @@ Before you begin, ensure you have the following hardware and software:
     *   Ensure **Device 1** is enabled.
     *   Check the **"X" axis** under "Axes". You can leave other axes/buttons unchecked.
     *   Click "Apply".
-    *   `![vJoy Config](./images/vjoy.png)`)*
+    *   *`![vJoy Config](./images/vjoy.png)`)*
 
 2.  **Camera Setup:**
     *   Position your webcam so it has a clear, stable view of your shoulders while you are on the bike in your normal riding position.
@@ -92,7 +91,7 @@ Before you begin, ensure you have the following hardware and software:
         *   **(Verification):** Run the `tilt_steering.py` script (see Usage below) and tilt your body. You should see the input bar for this axis move in XOutput.
     *   Click **"Save configuration"**.
     *   Go back to the main XOutput window.
-    *   `![XOutput Mapping](./images/xoutput.png)`)*
+    *  * `![XOutput Mapping](./images/xoutput.png)`)*
 
 4.  **Configure Steam:**
     *   **Disable Steam Input:** In your Steam Library, right-click Your Game -> Properties -> Controller -> Set "Override for ..." to **"Disable Steam Input"**. This prevents conflicts.
