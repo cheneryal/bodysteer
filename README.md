@@ -85,6 +85,8 @@ Before you begin, ensure you have the following hardware and software:
     *   From the dropdown menu, find your camera device then click Start.
     *   Click 'Start Calibration':
     *   On your bike, look straight at the camera (neutral position) and press 'Calibrate: Look Straight'. Tilt your body all the way to the left and click 'Calibrate: Tilt LEFT'. Finally, tilt your body all the way to the right and click 'Calibrate: Title RIGHT'.
+    *   Set the Deadzone and Sensitivity using the sliders.
+    *   Click 'Save Config' to save these settings.
 
 3.  **Configure XOutput:**
     *   Run `XOutput.exe`. You may need to grant firewall access.
