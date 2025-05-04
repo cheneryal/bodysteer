@@ -76,7 +76,7 @@ Before you begin, ensure you have the following hardware and software:
     *   Ensure **Device 1** is enabled.
     *   Check the **"X" axis** under "Axes". You can leave other axes/buttons unchecked.
     *   Click "Apply".
-    *   *`![vJoy Config](./images/vjoy.png)`)*
+![Alt text](images/vjoy.png)
 
 2.  **Camera Setup:**
     *   Position your webcam so it has a clear, stable view of your shoulders while you are on the bike in your normal riding position.
@@ -93,7 +93,7 @@ Before you begin, ensure you have the following hardware and software:
         *   **(Verification):** Run the `tilt_steering.py` script (see Usage below) and tilt your body. You should see the input bar for this axis move in XOutput.
     *   Click **"Save configuration"**.
     *   Go back to the main XOutput window.
-    *  * `![XOutput Mapping](./images/xoutput.png)`)*
+![Alt text](images/xoutput.png)
 
 4.  **Configure Steam:**
     *   **Disable Steam Input:** In your Steam Library, right-click Your Game -> Properties -> Controller -> Set "Override for ..." to **"Disable Steam Input"**. This prevents conflicts.
@@ -129,9 +129,9 @@ Before you begin, ensure you have the following hardware and software:
     *   Disconnect all other physical gamepads.
 *   **Steering is Jittery/Unstable:**
     *   Improve lighting conditions.
-    *   Increase the `deadzone` value in `main_gui.py`.
+    *   Increase the `deadzone` value in `main_gui.pyw`.
 *   **Steering is Too Sensitive / Not Sensitive Enough:**
-    *   Adjust the `max_tilt_angle` value in `main_gui.py`.
+    *   Adjust the `max_tilt_angle` value in `main_gui.pyw`.
 *   **XOutput Error / ViGEmBus Not Found:**
     *   Reinstall the ViGEmBus driver. Ensure you installed the correct version.
 *   **Python Script Error:**
