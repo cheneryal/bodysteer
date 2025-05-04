@@ -78,9 +78,13 @@ Before you begin, ensure you have the following hardware and software:
     *   Click "Apply".
 ![Alt text](images/vjoy.png)
 
-2.  **Camera Setup:**
+2.  **Run Bodysteer:**
     *   Position your webcam so it has a clear, stable view of your shoulders while you are on the bike in your normal riding position.
     *   Ensure good, consistent lighting. Avoid strong backlighting.
+    *   Double-click main_gui.pyw to execute the application.
+    *   From the dropdown menu, find your camera device then click Start.
+    *   Click 'Start Calibration':
+    *   On your bike, look straight at the camera (neutral position) and press 'Calibrate: Look Straight'. Tilt your body all the way to the left and click 'Calibrate: Tilt LEFT'. Finally, tilt your body all the way to the right and click 'Calibrate: Title RIGHT'.
 
 3.  **Configure XOutput:**
     *   Run `XOutput.exe`. You may need to grant firewall access.
