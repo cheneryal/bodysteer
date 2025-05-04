@@ -4,7 +4,7 @@ This project allows you to steer your character by tilting your body, using inpu
 
 This provides a hands-free steering solution, ideal for use with spin bikes and other fitness equipment connected via ANT+/Bluetooth sensors for speed/cadence.
 
-![alt text](https://github.com/cheneryal/bodysteer/images/ui.png "Bodysteer")
+![alt text](http://github.com/cheneryal/images/ui.png)
 
 ## Features
 
