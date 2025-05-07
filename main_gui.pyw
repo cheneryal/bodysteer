@@ -12,6 +12,7 @@ import threading
 import queue
 import json
 import os
+import sys
 
 # --- Constants ---
 VJOY_MAX_AXIS = 32767
@@ -19,6 +20,12 @@ VJOY_CENTER_AXIS = VJOY_MAX_AXIS // 2
 DEFAULT_DEADZONE = 0.05
 CONFIG_FILE = "tilt_config.json"
 MAX_CAMERAS_TO_CHECK = 10 # Check camera indices 0 through 9
+
+if getattr(sys, 'frozen', False):
+    # If we're running as a pyinstaller bundle
+    SCRIPT_DIR = sys._MEIPASS
+else:
+    SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 
 class TiltApp:
     def __init__(self, root):
@@ -72,7 +79,7 @@ class TiltApp:
         # --- Icon Setup ---
         try:
             # Best for Windows .ico files
-            self.root.iconbitmap('icon.ico')
+            self.root.iconbitmap(os.path.join(SCRIPT_DIR, 'icon.ico'))
         except tk.TclError:
             print("Icon file not found or invalid format. Using default icon.")
             # Optional: Try with PhotoImage for .png/.gif if .ico fails or isn't available
