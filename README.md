@@ -47,7 +47,7 @@ Before you begin, ensure you have the following software:
 
 1.  **Download Bodysteer Executable:**
     *   Go to the [Bodysteer GitHub Releases page](https://github.com/cheneryal/bodysteer/releases).
-    *   Download the latest `bodysteer-windows-vX.Y.Z.exe` file (where `X.Y.Z` is the version number).
+    *   Download the latest `bodysteer` file.
     *   Place the downloaded `bodysteer.exe` file somewhere convenient on your computer.
 
 2.  **Install Drivers:**
