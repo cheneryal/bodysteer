@@ -36,13 +36,13 @@ jobs:
         pip install pyinstaller
 
     - name: Run PyInstaller
-      run: pyinstaller main_gui.spec
+      run: pyinstaller main_gui.spec # This remains the same
 
     - name: Upload build artifact (for workflow runs)
       uses: actions/upload-artifact@v4
       with:
         name: bodysteer-windows-executable
-        path: dist/main_gui.exe
+        path: dist/bodysteer.exe # <<< --- CHANGED from main_gui.exe
 
     - name: Upload to Release
       if: github.event_name == 'release'
@@ -51,6 +51,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ./dist/main_gui.exe 
-        asset_name: bodysteer-windows-${{ github.ref_name }}.exe
+        asset_path: ./dist/bodysteer.exe # <<< --- CHANGED from main_gui.exe
+        asset_name: bodysteer-windows-${{ github.ref_name }}.exe # This name is fine
         asset_content_type: application/octet-stream
