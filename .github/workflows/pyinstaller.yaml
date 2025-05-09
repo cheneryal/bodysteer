@@ -1,30 +1,56 @@
-name: pyinstaller
+name: PyInstaller Build and Release
 
 on:
+  push:
+    branches: [ main ]
+  release:
+    types: [created]
   workflow_dispatch:
 
 jobs:
-  build:
+  build-windows:
     runs-on: windows-latest
     strategy:
       fail-fast: false
 
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
       with:
         python-version: '3.12'
 
-    - uses: jcwillox/install-tool-action@v1
+    - name: Install UPX
+      uses: jcwillox/install-tool-action@v1
       with:
         repo: "upx/upx"
         download_url: "/releases/download/v5.0.1/upx-5.0.1-win64.zip"
         bin_path: "upx-5.0.1-win64"
 
-    - run: pip install -r requirements.txt
-    - run: pip install pyinstaller
-    - run: pyinstaller main_gui.spec
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller
 
-    - uses: actions/upload-artifact@v4
+    - name: Run PyInstaller
+      run: pyinstaller main_gui.spec
+
+    - name: Upload build artifact (for workflow runs)
+      uses: actions/upload-artifact@v4
       with:
-        path: dist/*
+        name: bodysteer-windows-executable
+        path: dist/main_gui.exe
+
+    - name: Upload to Release
+      if: github.event_name == 'release'
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ./dist/main_gui.exe 
+        asset_name: bodysteer-windows-${{ github.ref_name }}.exe
+        asset_content_type: application/octet-stream
