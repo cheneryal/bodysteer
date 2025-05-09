@@ -10,7 +10,10 @@ def get_mediapipe_path():
 a = Analysis(['main_gui.pyw'],
              pathex=[],
              binaries=[],
-             datas=[('icon.ico', '.')],
+             datas=[
+                 ('icon.ico', '.'),
+                 ('images', 'images')
+             ],
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
@@ -19,7 +22,7 @@ a = Analysis(['main_gui.pyw'],
              win_private_assemblies=False,
              cipher=block_cipher,
              noarchive=False)
-pyz = PYZ(a.pure, a.zipped_data, 
+pyz = PYZ(a.pure, a.zipped_data,
           cipher=block_cipher)
 mediapipe_tree = Tree(get_mediapipe_path(), prefix='mediapipe', excludes=["*.pyc"])
 a.datas += mediapipe_tree
@@ -37,5 +40,5 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=['_uuid.pyd', 'python3.dll', 'api-ms-win-*.dll'],
           runtime_tmpdir=None,
-          console=True,
+          console=False,
           icon='icon.ico')
