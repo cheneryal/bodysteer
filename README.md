@@ -17,10 +17,11 @@ This provides a hands-free steering solution, ideal for use with spin bikes and 
 
 ## Installation Options
 
-You have two main ways to install and use Bodysteer:
+You have three main ways to install and use Bodysteer:
 
 1.  **Easy Installation (Recommended for Most Users):** Download a pre-built executable. This is the simplest way to get started.
 2.  **Manual Installation (For Developers or Customization):** Clone the repository and set up a Python environment. This is for users who want to modify the code or contribute.
+3.  **Easy Installation without joystick drivers (GTA V only):** Download a pre-built executable and a Script Hook V .NET script.
 
 ---
 
@@ -107,6 +108,24 @@ Before you begin, ensure you have the following hardware and software:
     *   Place the downloaded `XOutput.exe` file somewhere convenient (it doesn't need to be in the project folder, but you need to know where it is).
 
 6.  **Proceed to the [Configuration](#configuration) section below.**
+
+---
+
+### Option 3: Easy Installation without joystick drivers
+
+**Hardware:**
+
+*   A PC capable of running GTA V (and optionally [GTBikeV](https://www.gtbikev.com/)).
+*   A standard webcam positioned to see your upper body/shoulders clearly.
+*   (Optional) Your bike setup with Bluetooth/ANT+ sensors.
+
+**Installation Steps:**
+
+*   Go to the [Bodysteer GitHub Releases page](https://github.com/cheneryal/bodysteer/releases).
+*   Download the latest `bodysteer` and `Steer` files.
+*   Place the downloaded `bodysteer.exe` file somewhere convenient on your computer.
+*   Place the downloaded `Steer.dll` file in the `Grand Theft Auto V\Scripts` folder.
+*   The `Steer` script requires [Script Hook V](http://www.dev-c.com/gtav/scripthookv/) and [Script Hook V .NET](https://github.com/scripthookvdotnet/scripthookvdotnet) which should be already installed if you use GTBikeV.
 
 ---
 
