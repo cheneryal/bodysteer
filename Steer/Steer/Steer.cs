@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Globalization;
-using System.Text;
 using System.Threading.Tasks;
 using GTA;
 
@@ -21,9 +19,9 @@ namespace Steer
                     {
                         pipe = new System.IO.Pipes.NamedPipeServerStream("tilt", System.IO.Pipes.PipeDirection.In);
                         pipe.WaitForConnection();
-                        byte[] buffer = new byte[10];
+                        byte[] buffer = new byte[4];
                         pipe.Read(buffer, 0, buffer.Length);
-                        var tilt = float.Parse(Encoding.UTF8.GetString(buffer), CultureInfo.InvariantCulture.NumberFormat);
+                        float tilt = BitConverter.ToSingle(buffer, 0);
                         steeringScale = -tilt;
                     }
                     catch

@@ -13,6 +13,7 @@ import queue
 import json
 import os
 import sys
+import struct
 
 # --- Constants ---
 VJOY_MAX_AXIS = 32767
@@ -760,8 +761,8 @@ class TiltApp:
                         # self.vjoy_available = False
                 else:
                     try:
-                        with open(r"\\.\pipe\tilt", "w") as pipe:
-                            pipe.write(str(self.tilt_value))
+                        with open(r"\\.\pipe\tilt", "wb") as pipe:
+                            pipe.write(struct.pack("f", self.tilt_value))
                             pipe.flush()
                     except:
                         pass
