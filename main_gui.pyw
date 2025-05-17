@@ -13,6 +13,7 @@ import queue
 import json
 import os
 import sys
+import struct
 
 # --- Constants ---
 VJOY_MAX_AXIS = 32767
@@ -758,6 +759,13 @@ class TiltApp:
                         print(f"Warning: Could not set vJoy axis: {e}")
                         # Maybe disable vJoy if it keeps failing?
                         # self.vjoy_available = False
+                else:
+                    try:
+                        with open(r"\\.\pipe\tilt", "wb") as pipe:
+                            pipe.write(struct.pack("f", self.tilt_value))
+                            pipe.flush()
+                    except:
+                        pass
 
                 # --- Prepare data for GUI ---
                 # Put frame onto queue

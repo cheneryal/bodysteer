@@ -17,10 +17,11 @@ This provides a hands-free steering solution, ideal for use with spin bikes and 
 
 ## Installation Options
 
-You have two main ways to install and use Bodysteer:
+You have three main ways to install and use Bodysteer:
 
 1.  **Easy Installation (Recommended for Most Users):** Download a pre-built executable. This is the simplest way to get started.
 2.  **Manual Installation (For Developers or Customization):** Clone the repository and set up a Python environment. This is for users who want to modify the code or contribute.
+3.  **Easy Installation without joystick drivers (GTA V only):** Download a pre-built executable and a Script Hook V .NET script.
 
 ---
 
@@ -110,6 +111,25 @@ Before you begin, ensure you have the following hardware and software:
 
 ---
 
+### Option 3: Easy Installation without joystick drivers
+
+**Hardware:**
+
+*   A PC capable of running GTA V (and optionally [GTBikeV](https://www.gtbikev.com/)).
+*   A standard webcam positioned to see your upper body/shoulders clearly.
+*   (Optional) Your bike setup with Bluetooth/ANT+ sensors.
+
+**Installation Steps:**
+
+*   Go to the [Bodysteer GitHub Releases page](https://github.com/cheneryal/bodysteer/releases).
+*   Download the latest `bodysteer` file.
+*   Place the downloaded `bodysteer.exe` file somewhere convenient on your computer.
+*   Download the script [Steer.3.cs](Steer.3.cs) and place it in the `Grand Theft Auto V\Scripts` folder.
+*   The script requires [Script Hook V](http://www.dev-c.com/gtav/scripthookv/) and [Script Hook V .NET](https://github.com/scripthookvdotnet/scripthookvdotnet) which should be already installed if you use GTBikeV.
+*   Proceed to step 2 of [Configuration](#configuration) section below (the other steps are not necessary).
+
+---
+
 ## Configuration
 
 *(These steps are common for both Easy and Manual installations)*
@@ -152,7 +172,7 @@ Before you begin, ensure you have the following hardware and software:
     *   Click "**Save configuration**".
     *   Go back to the main XOutput window.
 
-![Bodysteer vJoy Configuration](https://github.com/cheneryal/bodysteer/raw/main/images/vjoy.png)
+![Bodysteer xoutput Configuration](https://github.com/cheneryal/bodysteer/raw/main/images/xoutput.png)
 
 4.  **Configure Steam (or Game Launcher):**
     *   **Disable Steam Input (Recommended for many games):** In your Steam Library, right-click your game -> Properties -> Controller -> Set "Override for ..." to "**Disable Steam Input**". This prevents conflicts.
