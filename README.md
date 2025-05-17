@@ -172,7 +172,7 @@ Before you begin, ensure you have the following hardware and software:
     *   Click "**Save configuration**".
     *   Go back to the main XOutput window.
 
-![Bodysteer vJoy Configuration](https://github.com/cheneryal/bodysteer/raw/main/images/vjoy.png)
+![Bodysteer xoutput Configuration](https://github.com/cheneryal/bodysteer/raw/main/images/xoutput.png)
 
 4.  **Configure Steam (or Game Launcher):**
     *   **Disable Steam Input (Recommended for many games):** In your Steam Library, right-click your game -> Properties -> Controller -> Set "Override for ..." to "**Disable Steam Input**". This prevents conflicts.
