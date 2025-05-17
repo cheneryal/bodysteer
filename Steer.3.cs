@@ -29,7 +29,8 @@ namespace Steer
                     }
                     finally
                     {
-                        pipe?.Dispose();
+                        if (pipe != null)
+                            pipe.Dispose();
                     }
                 }
             });

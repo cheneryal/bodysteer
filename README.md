@@ -122,10 +122,11 @@ Before you begin, ensure you have the following hardware and software:
 **Installation Steps:**
 
 *   Go to the [Bodysteer GitHub Releases page](https://github.com/cheneryal/bodysteer/releases).
-*   Download the latest `bodysteer` and `Steer` files.
+*   Download the latest `bodysteer` file.
 *   Place the downloaded `bodysteer.exe` file somewhere convenient on your computer.
-*   Place the downloaded `Steer.dll` file in the `Grand Theft Auto V\Scripts` folder.
-*   The `Steer` script requires [Script Hook V](http://www.dev-c.com/gtav/scripthookv/) and [Script Hook V .NET](https://github.com/scripthookvdotnet/scripthookvdotnet) which should be already installed if you use GTBikeV.
+*   Download the script [Steer.3.cs](Steer.3.cs) and place it in the `Grand Theft Auto V\Scripts` folder.
+*   The script requires [Script Hook V](http://www.dev-c.com/gtav/scripthookv/) and [Script Hook V .NET](https://github.com/scripthookvdotnet/scripthookvdotnet) which should be already installed if you use GTBikeV.
+*   Proceed to step 2 of [Configuration](#configuration) section below (the other steps are not necessary).
 
 ---
 
