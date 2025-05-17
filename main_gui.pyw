@@ -1,5 +1,3 @@
-import os
-os.environ["OPENCV_VIDEOIO_MSMF_ENABLE_HW_TRANSFORMS"] = "0"
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -13,6 +11,7 @@ from PIL import Image, ImageTk
 import threading
 import queue
 import json
+import os
 import sys
 import struct
 
