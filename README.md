@@ -227,6 +227,9 @@ Before you begin, ensure you have the following hardware and software:
     *   Ensure the correct camera is selected from the dropdown in the Bodysteer GUI.
     *   Verify the webcam is not being used by another application.
     *   Check webcam drivers and connection.
+*   **Bodysteer takes too long to detect camera:**
+    *   Access **Control Panel > System > Advanced system settings > Advanced > Environment variables**.
+    *   Add a new environment variable `OPENCV_VIDEOIO_MSMF_ENABLE_HW_TRANSFORMS` with value `0`.
 
 ## Contributing
 
